@@ -9,9 +9,8 @@ do
 zenbot sim binance.RVN-BTC  \
 --strategy=multi \
 --period_length=3m \
+--poll_trades=5000 \
 --min_periods=52 \
---markdown_buy_pct=0 \
---markup_sell_pct=0 \
 --overbought_rsi_periods=25 \
 --overbought_rsi=74 \
 --length=11 \
