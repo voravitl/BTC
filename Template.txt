@@ -1,0 +1,18 @@
+zenbot sim binance.TRX-BTC  \
+--strategy=multi \
+--period_length=2m \
+--min_periods=52 \
+--markdown_buy_pct=0 \
+--markup_sell_pct=0 \
+--overbought_rsi_periods=25 \
+--overbought_rsi=70 \
+--length=10 \
+--fish_pct_change=0 \
+--pos_length=1 \
+--src=ohlc4 \
+--momentum_size=5 \
+--max_sell_loss_pct=25 \
+--profit_stop_enable_pct=0 \
+--markdown_buy_pct=0 \
+--markup_sell_pct=0 \
+--sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=1 |

@@ -1,0 +1,35 @@
+#!/bin/bash
+rm -f *.txt
+function ta_macd_ext {
+for i in {10..30}
+#for i in SMA EMA WMA DEMA TEMA TRIMA KAMA MAMA T3
+#for i in 10 20 30 40 50 60 70 80 90 100
+#for i in 1m 3m 5m 15m 30m 45m 1h 4h  
+do
+zenbot sim binance.TRX-BTC  \
+--strategy=ta_macd_ext \
+--period=2m \
+--min_periods=52 \
+--overbought_rsi_periods=25 \
+--overbought_rsi=78 \
+--poll_trades=5000 \
+--order_poll_time=5000 \
+--exact_buy_orders \
+--exact_sell_orders \
+--order_adjust_time=5000 \
+--sell_stop_pct=0 \
+--buy_stop_pct=0 \
+--max_sell_loss_pct=3 \
+--max_buy_loss_pct=100 \
+--profit_stop_enable_pct=6 \
+--max_slippage_pct=5 \
+--profit_stop_pct=0.2 \
+--markdown_buy_pct=0.$i \
+--markup_sell_pct=0.14 --buy_pct=100 --sell_pct=100 --currency_capital=0.08 --days=14 | grep -A5 "end balance" > $i.txt
+done
+}
+#SELL 16
+#18 16
+ta_macd_ext
+
+
