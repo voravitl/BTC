@@ -23,8 +23,8 @@ zenbot sim binance.RVN-BTC  \
 --max_sell_loss_pct=2 \
 --profit_stop_enable_pct=4 \
 --profit_stop_pct=1 \
---markdown_buy_pct=0.$i \
---markup_sell_pct=0.85 \
+--markdown_buy_pct=0.31 \
+--markup_sell_pct=0.41 \
 --sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=2 | grep -A5 "end balance" > $i.txt
 done
 }
