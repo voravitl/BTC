@@ -6,7 +6,7 @@ for i in {1..9}
 #for i in 1m 3m 5m 15m 30m 45m 1h 4h
 #for i in `cat ./stg.ini`
 do
-zenbot sim binance.BTT-USDT  \
+zenbot sim binance.BTT-USDT \
 --strategy=multi \
 --period_length=3m \
 --poll_trades=4000 \
@@ -28,7 +28,7 @@ zenbot sim binance.BTT-USDT  \
 --max_slippage_pct=4 \
 --markdown_buy_pct=0.$i \
 --markup_sell_pct=0.$i \
---sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=4  | grep -A5 "end balance" > $i.txt
+--sell_pct=100 --buy_pct=100 --currency_capital=100 --days=4  | grep -A5 "end balance" > $i.txt
 done
 }
 #18 16
