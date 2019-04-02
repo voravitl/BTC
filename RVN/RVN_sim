@@ -20,15 +20,25 @@ zenbot sim binance.RVN-BTC  \
 --pos_length=2 \
 --src=ohlc4 \
 --momentum_size=7 \
+<<<<<<< HEAD
 --max_sell_loss_pct=5 \
 --profit_stop_enable_pct=4 \
+=======
+--max_sell_loss_pct=2 \
+--profit_stop_enable_pct=11 \
+>>>>>>> 301a8ff02cfb3418c3ab7f5f8b1aa1f6dd0ccfde
 --profit_stop_pct=1 \
 --exact_buy_orders \
 --exact_sell_orders \
 --max_slippage_pct=4 \
 --markdown_buy_pct=0.27 \
+<<<<<<< HEAD
 --markup_sell_pct=0.$i \
 --end=201904020800 \
+=======
+--markup_sell_pct=0.60 \
+--end=201903281000 \
+>>>>>>> 301a8ff02cfb3418c3ab7f5f8b1aa1f6dd0ccfde
 --sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=3 | grep -A5 "end balance" > $i.txt
 done
 }
