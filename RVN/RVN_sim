@@ -28,7 +28,7 @@ zenbot sim binance.RVN-BTC  \
 --max_slippage_pct=4 \
 --markdown_buy_pct=0.20 \
 --markup_sell_pct=0.$i \
---end=201904030800 \
+--end=201904040800 \
 --sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=3 | grep -A5 "end balance" > $i.txt
 done
 }
