@@ -16,7 +16,7 @@ zenbot sim binance.RVN-BTC  \
 --overbought_rsi_periods=25 \
 --overbought_rsi=74 \
 --length=11 \
---fish_pct_change=0.5 \
+--fish_pct_change=0 \
 --pos_length=2 \
 --src=ohlc4 \
 --momentum_size=7 \
@@ -26,10 +26,10 @@ zenbot sim binance.RVN-BTC  \
 --exact_buy_orders \
 --exact_sell_orders \
 --max_slippage_pct=4 \
---markdown_buy_pct=0.20 \
---markup_sell_pct=0.$i \
---end=201904040800 \
---sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=3 | grep -A5 "end balance" > $i.txt
+--markdown_buy_pct=0.$i \
+--markup_sell_pct=0.10 \
+--end=201904040850 \
+--sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=2 | grep -A5 "end balance" > $i.txt
 done
 }
 ta_macd_ext
