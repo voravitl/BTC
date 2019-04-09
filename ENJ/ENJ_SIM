@@ -7,35 +7,28 @@ for i in {1..9}
 #for i in 1m 2m 3m 5m 15m 30m 45m 1h 4h  
 do
 zenbot sim binance.ENJ-BTC  \
---strategy=ta_macd_ext \
---period=2m \
---min_periods=52 \
---ema_short_period=12 \
---ema_long_period=26 \
---signal_period=9 \
---fast_ma_type=EMA \
---slow_ma_type=EMA \
---signal_ma_type=EMA \
---default_ma_type=signal_ma_type \
---up_trend_threshold=0 \
---down_trend_threshold=0 \
---overbought_rsi_periods=25 \
---overbought_rsi=78 \
---poll_trades=5000 \
---order_poll_time=5000 \
+--strategy=multi \
+--period_length=3m \
 --order_adjust_time=5000 \
+--order_poll_time=6000 \
+--poll_trades=5000 \
+--min_periods=52 \
+--overbought_rsi_periods=25 \
+--overbought_rsi=74 \
+--length=11 \
+--fish_pct_change=0 \
+--pos_length=2 \
+--src=ohlc4 \
+--momentum_size=7 \
+--max_sell_loss_pct=25 \
+--profit_stop_enable_pct=0 \
+--profit_stop_pct=0 \
 --exact_buy_orders \
 --exact_sell_orders \
---sell_stop_pct=0 \
---buy_stop_pct=0 \
---max_sell_loss_pct=4 \
---max_buy_loss_pct=100 \
---profit_stop_enable_pct=9 \
---max_slippage_pct=25 \
---profit_stop_pct=1 \
---markdown_buy_pct=0.4 \
+--max_slippage_pct=4 \
+--markdown_buy_pct=0.$i \
 --markup_sell_pct=0.$i \
---sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=1 | grep -A5 "end balance" > $i.txt
+--sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=3  | grep -A5 "end balance" > $i.txt
 done
 }
 ta_macd_ext
