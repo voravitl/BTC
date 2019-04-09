@@ -11,7 +11,7 @@ zenbot sim binance.RVN-BTC  \
 --period_length=3m \
 --order_adjust_time=2000 \
 --order_poll_time=1000 \
---poll_trades=5000 \
+--poll_trades=3000 \
 --min_periods=52 \
 --overbought_rsi_periods=25 \
 --overbought_rsi=74 \
@@ -20,15 +20,15 @@ zenbot sim binance.RVN-BTC  \
 --pos_length=2 \
 --src=ohlc4 \
 --momentum_size=7 \
---max_sell_loss_pct=6 \
---profit_stop_enable_pct=4 \
+--max_sell_loss_pct=25 \
+--profit_stop_enable_pct=8 \
 --profit_stop_pct=1 \
 --exact_buy_orders \
 --exact_sell_orders \
 --max_slippage_pct=4 \
---markdown_buy_pct=0.44 \
---markup_sell_pct=0.$i \
---end=201904040900 \
+--markdown_buy_pct=0.$i \
+--markup_sell_pct=0.12 \
+--end=201904091800 \
 --sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=2 | grep -A5 "end balance" > $i.txt
 done
 }
