@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -f *.txt
 function ta_macd_ext {
-for i in {1..9}
+for i in {10..40}
 #for i in hl2 hlc3 ohlc4 HAhlc3 HAohlc4
 #for i in SMA EMA WMA DEMA TEMA TRIMA KAMA MAMA T3
 #for i in 10 20 30 40 50 60 70 80 90 100
@@ -10,8 +10,8 @@ do
 zenbot sim binance.mith-BTC  \
 --strategy=multi \
 --period_length=3m \
---order_adjust_time=5000 \
---order_poll_time=5000 \
+--order_adjust_time=16000 \
+--order_poll_time=16000 \
 --poll_trades=5000 \
 --min_periods=52 \
 --overbought_rsi_periods=25 \
@@ -21,14 +21,14 @@ zenbot sim binance.mith-BTC  \
 --pos_length=2 \
 --src=ohlc4 \
 --momentum_size=7 \
---max_sell_loss_pct=25 \
+--max_sell_loss_pct=5 \
 --profit_stop_enable_pct=0 \
 --profit_stop_pct=0 \
 --exact_buy_orders \
 --exact_sell_orders \
 --max_slippage_pct=4 \
---markdown_buy_pct=0.$i \
---markup_sell_pct=0.$i \
+--markdown_buy_pct=0.30 \
+--markup_sell_pct=0.30 \
 --sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=3 | grep -A5 "end balance" > $i.txt
 done
 }
