@@ -1,6 +1,6 @@
-end balance: [33m0.08000000[39m (0.00%)
-buy hold: [33m0.07907763[39m (-1.16%)
-vs. buy hold: [33m1.16%[39m
-0 trades over 4 days (avg 0.00 trades/day)
-{
-  "asset_capital": 0,
+end balance: [33m0.07724330[39m (-3.45%)
+buy hold: [33m0.07881222[39m (-1.49%)
+vs. buy hold: [33m-2.00%[39m
+126 trades over 4 days (avg 31.50 trades/day)
+win/loss: 19/43
+error rate: [33m69.35%[39m
