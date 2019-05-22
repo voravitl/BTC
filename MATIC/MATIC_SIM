@@ -26,8 +26,8 @@ zenbot sim binance.MATIC-BTC  \
 --exact_buy_orders \
 --exact_sell_orders \
 --max_slippage_pct=4 \
---markdown_buy_pct=0.51 \
---markup_sell_pct=0.50 \
+--markdown_buy_pct=0.70 \
+--markup_sell_pct=0.51 \
 --sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=7 | grep -A5 "end balance"  > $i.txt
 done
 }
