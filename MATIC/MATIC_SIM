@@ -1,17 +1,17 @@
 #!/bin/bash
+COIN="MATIC"
 rm -f *.txt
 function ta_macd_ext {
-for i in {1..10}
+for i in {40..50}
 #for i in SMA EMA WMA DEMA TEMA TRIMA KAMA MAMA T3
 #for i in 10 20 30 40 50 60 70 80 90 100
 #for i in 1m 2m 3m 5m 15m 30m 45m 1h 4h  
 do
-zenbot sim binance.MATIC-BTC  \
+zenbot sim binance.${COIN}-BTC  \
 --strategy=multi \
---period_length=3m \
---order_adjust_time=6000 \
---order_poll_time=6000 \
---poll_trades=1000 \
+--period_length=45m \
+--order_adjust_time=11000 \
+--order_poll_time=11000 \
 --min_periods=52 \
 --overbought_rsi_periods=25 \
 --overbought_rsi=74 \
@@ -19,18 +19,19 @@ zenbot sim binance.MATIC-BTC  \
 --fish_pct_change=0 \
 --pos_length=2 \
 --src=ohlc4 \
---momentum_size=9 \
---max_sell_loss_pct=6 \
---profit_stop_enable_pct=$i \
+--momentum_size=5 \
+--max_sell_loss_pct=25 \
+--profit_stop_enable_pct=6 \
 --profit_stop_pct=1 \
 --exact_buy_orders \
 --exact_sell_orders \
 --max_slippage_pct=4 \
---markdown_buy_pct=0.70 \
---markup_sell_pct=0.51 \
---sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=7 | grep -A5 "end balance"  > $i.txt
+--markdown_buy_pct=0.$i \
+--markup_sell_pct=0.50 \
+--sell_pct=100 --buy_pct=100 --currency_capital=0.08 --days=14  | grep -A5 "end balance" > $i.txt
 done
 }
+#zenbot backfill binance.${COIN}-BTC --days=30
 ta_macd_ext
-#24 54
+#53 50
 # --end=201903080900

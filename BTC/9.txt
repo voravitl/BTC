@@ -1,6 +1,0 @@
-end balance: [33m100.00000000[39m (0.00%)
-buy hold: [33m108.35699811[39m (8.35%)
-vs. buy hold: [33m-7.72%[39m
-0 trades over 6 days (avg 0.00 trades/day)
-{
-  "asset_capital": 0,

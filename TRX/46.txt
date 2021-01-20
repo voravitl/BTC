@@ -1,6 +1,0 @@
-end balance: [33m0.09699165[39m (21.23%)
-buy hold: [33m0.08474393[39m (5.92%)
-vs. buy hold: [33m14.45%[39m
-37 trades over 6 days (avg 6.16 trades/day)
-win/loss: 14/3
-error rate: [33m17.64%[39m
